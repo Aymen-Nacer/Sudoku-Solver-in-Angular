@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 .intro {
-  color: #00203fff;
+  color: rgb(31, 82, 133);
   font-size: 35px;
   margin: 30px 0px 10px 0px;
 }
@@ -17,7 +17,7 @@ h1 {
 .instruction-1,
 .description {
   font-size: 18px;
-  color: #00203fff;
+  color: rgb(31, 82, 133);
 }
 
 .description {
@@ -47,13 +47,13 @@ h1 {
 .puzzle input {
   text-align: center;
   font-size: 30px;
-  width: 60px;
-  height: 60px;
+  width: 44.4px;
+  height: 44.4px;
   border: 1px #808080 solid;
 }
 
 .empty-el {
-  color: #00203fff;
+  color: rgb(31, 82, 133);
 }
 
 .buttons {
@@ -64,7 +64,7 @@ h1 {
 .clear-button,
 .load-button {
   margin-top: 20px;
-  background-color: #00203fff;
+  background-color: rgb(31, 82, 133);
   border: none;
   border-radius: 3px;
   color: white;

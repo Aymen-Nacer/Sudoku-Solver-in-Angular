@@ -15,20 +15,20 @@
         <span class="decorator-elem">backtracking</span> technique.
       </p>
 
-      <div id="puzzle" class="puzzle"></div>
+      <div #puzzle class="puzzle"></div>
       <div class="buttons">
-        <button type="button" id="solve-button" class="solve-button">
+        <button type="button" (click)="onSolved()" class="solve-button">
           Solve
         </button>
-        <button type="button" id="clear-button" class="clear-button">
+        <button type="button" (click)="onCleared()" class="clear-button">
           Clear
         </button>
-        <button type="button" id="load-button" class="load-button">
+        <button type="button" (click)="onLoaded()" class="load-button">
           Load a puzzle
         </button>
       </div>
       <br />
-      <br />
+
       <div class="instructions">
         <p class="instruction-1">
           Enter a valid sudoku puzzle. Then click the
