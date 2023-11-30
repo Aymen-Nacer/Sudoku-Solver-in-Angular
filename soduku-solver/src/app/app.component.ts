@@ -2,7 +2,9 @@ import {
   Component,
   ElementRef,
   OnInit,
+  QueryList,
   ViewChild,
+  ViewChildren,
   ViewEncapsulation,
 } from '@angular/core';
 import { DrawBoardService } from './draw-board.service';
@@ -33,14 +35,28 @@ export class AppComponent implements OnInit {
   ngOnInit() {}
 
   onSolved() {
-    console.log('onSolved');
+    let inputs: NodeListOf<HTMLInputElement> =
+      this.puzzleElement.nativeElement.childNodes;
+
+    this.solver.insertValues(inputs);
+
+    console.log(this.solver.board);
+
+    if (this.solver.solve()) {
+      this.solver.populateValues(inputs);
+    } else {
+      alert("Can't solve this puzzle!");
+    }
   }
 
   onCleared() {
-    console.log('onCleared');
+    location.reload();
   }
 
   onLoaded() {
-    console.log('onLoaded');
+    let inputs: NodeListOf<HTMLInputElement> =
+      this.puzzleElement.nativeElement.childNodes;
+
+    this.loadBoards.loadRandomBoard(inputs);
   }
 }
