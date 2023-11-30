@@ -11,7 +11,6 @@ export class DrawBoardService {
 
 
    drawBoard(sudokuBoard: Element) {
-    //const sudokuBoard = document.querySelector("#puzzle")
     const squares = 81
 
     for (let i=0; i<squares; i++) {
