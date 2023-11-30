@@ -40,8 +40,6 @@ export class AppComponent implements OnInit {
 
     this.solver.insertValues(inputs);
 
-    console.log(this.solver.board);
-
     if (this.solver.solve()) {
       this.solver.populateValues(inputs);
     } else {
@@ -50,7 +48,12 @@ export class AppComponent implements OnInit {
   }
 
   onCleared() {
-    location.reload();
+    let inputs: NodeListOf<HTMLInputElement> =
+      this.puzzleElement.nativeElement.childNodes;
+
+    inputs.forEach((input) => {
+      input.value = '';
+    });
   }
 
   onLoaded() {
